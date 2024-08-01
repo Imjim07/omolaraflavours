@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript HTML5 Tip Calculator Application</title>
+   <style>
+    body { background: #000; color: #FFF; text-align: center; line-height: 2em; font-family: Arial; } input[type=text]{
+    padding: 15px; font-size: 30px; text-align: center; background: #e4e4e4; }
+    </style>
+    <script>
+    function tipCalculate(slider, bill)
+    {
+    var tip = document-getElementById('tip');
+    var slideval = document.getElementById('slideval');
+    var bill = document.getElementById (bill).value;
+    var prent = slider * .01;
+    tip.innerHTML = "$"+(bill * prent).toFixed(2);
+    slideval. innerHTML = slider+"%";
+    }
+    </script>
+    </head>
+    <body>
+      <h2>AdamBapos;s Tip Calculator</h2>
+    <h3>Enter the bill amount for your meal:</h3>
+    <input type="text" id="bi11" autofocus><br>
+    <h3>Slide to the percentage you want:</h3>
+    <input type="range" min="0" max="100" value="0" step="1" onchange="tipCalculate(this.value, 'bill')" style="width:400px;">
+    <span id="slideval">0%</span>
+    <h2>Tip = <span id="tip"></span></h2>
+    </body>  
